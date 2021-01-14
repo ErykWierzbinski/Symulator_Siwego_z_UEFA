@@ -1,0 +1,19 @@
+﻿<Application x:Class="Symulator_Siwego_z_UEFA.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Symulator_Siwego_z_UEFA"
+             xmlns:views="clr-namespace:Symulator_Siwego_z_UEFA.Views"
+             xmlns:viewmodels="clr-namespace:Symulator_Siwego_z_UEFA.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:QuickMatchViewModel}">
+            <views:QuickMatchView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:QuickMatchOptionsViewModel}">
+            <views:QuickMatchOptionsView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:MainViewModel}">
+            <local:MainWindow/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
